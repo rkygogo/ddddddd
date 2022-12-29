@@ -10,14 +10,14 @@
 			"protocol": "vmess",
 			"settings": {
 				"clients": [{
-					"id": "UUID",
+					"id": "uuid",
 					"alterId": 0
 				}]
 			},
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/VMESS_WSPATH"
+					"path": "/uuid-vm"
 				}
 			}
 		},
@@ -27,14 +27,14 @@
 			"protocol": "vless",
 			"settings": {
 				"clients": [{
-					"id": "UUID"
+					"id": "uuid"
 				}],
 				"decryption": "none"
 			},
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/VLESS_WSPATH"
+					"path": "/uuid-vl"
 				}
 			}
 		},
@@ -45,14 +45,14 @@
 			"settings": {
 				"clients": [
 					{
-						"password": "UUID"
+						"password": "uuid"
 					}
 				]
 			},
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/trojan"
+					"path": "/uuid-tr"
 				}
 			}
 		},
@@ -62,13 +62,13 @@
 			"protocol": "shadowsocks",
 			"settings": {
 				"method": "chacha20-ietf-poly1305",
-				"password": "UUID",
+				"password": "uuid",
 				"ivcheck": true
 			},
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/ss"
+					"path": "/uuid-ss"
 				}
 			}
 		},
@@ -80,15 +80,15 @@
 				"auth": "password",
 				"accounts": [
 					{
-						"user": "UUID",
-						"pass": "UUID"
+						"user": "uuid",
+						"pass": "uuid"
 					}
 				]
 			},
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/socks"
+					"path": "/uuid-so"
 				}
 			}
 		}  		     
