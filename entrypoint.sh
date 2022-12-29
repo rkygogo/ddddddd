@@ -3,9 +3,6 @@
 # Web Site:https://www.hicairo.com
 # Telegram:https://t.me/HiaiFeng
 
-sed -i "s/UUID/$UUID/g" /etc/xray/config.json
-sed -i "s/VMESS_WSPATH/$VMESS_WSPATH/g" /etc/xray/config.json
-sed -i "s/VLESS_WSPATH/$VLESS_WSPATH/g" /etc/xray/config.json
-sed -i "s/VMESS_WSPATH/$VMESS_WSPATH/g" /etc/nginx/nginx.conf
-sed -i "s/VLESS_WSPATH/$VLESS_WSPATH/g" /etc/nginx/nginx.conf
+sed -i "s/uuid/$uuid/g" /etc/xray/config.json
+sed -i "s/uuid/$uuid/g" /etc/nginx/nginx.conf
 exec "$@"
