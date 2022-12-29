@@ -37,7 +37,62 @@
 					"path": "/VLESS_WSPATH"
 				}
 			}
-		}
+		},
+		   {
+			"port": 30000,  
+			"listen": "127.0.0.1",
+			"protocol": "trojan",
+			"settings": {
+				"clients": [
+					{
+						"password": "UUID"
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "ws",
+				"wsSettings": {
+					"path": "/UUID-trojan"
+				}
+			}
+		},
+		{
+			"port": 40000,
+			"listen": "127.0.0.1",
+			"protocol": "shadowsocks",
+			"settings": {
+				"method": "chacha20-ietf-poly1305",
+				"password": "UUID",
+				"ivcheck": true
+			},
+			"streamSettings": {
+				"network": "ws",
+				"wsSettings": {
+					"path": "/UUID-ss"
+				}
+			}
+		},
+		{
+			"port": 50000,
+			"listen": "127.0.0.1",
+			"protocol": "socks",
+			"settings": {
+				"auth": "password",
+				"accounts": [
+					{
+						"user": "UUID",
+						"pass": "UUID"
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "ws",
+				"wsSettings": {
+					"path": "/UUID-socks"
+				}
+			}
+		}  		     
+		     		     
 	],
 	"outbounds": [{
 		"protocol": "freedom",
