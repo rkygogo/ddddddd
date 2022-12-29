@@ -52,7 +52,7 @@
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/UUID-trojan"
+					"path": "/trojan"
 				}
 			}
 		},
@@ -68,7 +68,7 @@
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/UUID-ss"
+					"path": "/ss"
 				}
 			}
 		},
@@ -88,7 +88,7 @@
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "/UUID-socks"
+					"path": "/socks"
 				}
 			}
 		}  		     
