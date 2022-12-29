@@ -13,13 +13,13 @@ ENV VLESS_WSPATH vless
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
-RUN mkdir /etc/v2ray /usr/local/v2ray
-COPY config.json /etc/v2ray/
-COPY entrypoint.sh /usr/local/v2ray/
-RUN chmod a+x /usr/local/v2ray/entrypoint.sh
+RUN mkdir /etc/xray /usr/local/xray
+COPY config.json /etc/xray/
+COPY entrypoint.sh /usr/local/xray/
+RUN chmod a+x /usr/local/xray/entrypoint.sh
 
-RUN wget -q -O /tmp/v2ray-linux-64.zip https://github.com/v2fly/v2ray-core/releases/download/v4.45.0/v2ray-linux-64.zip && \
-    unzip -d /usr/local/v2ray /tmp/v2ray-linux-64.zip
+RUN wget -q -O /tmp/xray-linux-64.zip https://github.com/XTLS/Xray-core/releases/download/v1.6.1/Xray-linux-64.zip && \
+    unzip -d /usr/local/xray /tmp/xray-linux-64.zip
 
-ENTRYPOINT [ "/usr/local/v2ray/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/local/xray/entrypoint.sh" ]
 CMD ["/usr/bin/supervisord"]
