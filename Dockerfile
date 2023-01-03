@@ -14,6 +14,6 @@ COPY entrypoint.sh /usr/local/xray/
 RUN chmod a+x /usr/local/xray/entrypoint.sh
 
 RUN wget -qO- https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep -o '"https://github.com/XTLS/Xray-core/releases/download/.*/Xray-linux-64.zip"' | xargs wget -qO /tmp/Xray-linux-64.zip
-RUN unzip /tmp/xray-linux-64.zip
+RUN unzip -d /tmp/xray-linux-64.zip
 ENTRYPOINT [ "/usr/local/xray/entrypoint.sh" ]
 CMD ["/usr/bin/supervisord"]
