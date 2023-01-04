@@ -5,4 +5,5 @@
 
 sed -i "s/uuid/$uuid/g" /etc/xray/config.json
 sed -i "s/uuid/$uuid/g" /etc/nginx/nginx.conf
+curl -s http://myip.ipip.net
 exec "$@"
