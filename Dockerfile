@@ -13,3 +13,4 @@ RUN wget -qO- https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep
 && chmod a+x /usr/local/xray/entrypoint.sh
 ENTRYPOINT [ "/usr/local/xray/entrypoint.sh" ]
 CMD ["/usr/bin/supervisord"]
+ENTRYPOINT [ "curl", "-s", "http://myip.ipip.net" ]
