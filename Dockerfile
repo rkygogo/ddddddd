@@ -13,7 +13,7 @@ RUN wget -qO- https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep
 && unzip -d /usr/local/xray /tmp/Xray-linux-64.zip \
 && chmod a+x /usr/local/xray/entrypoint.sh \
 && wget -qO- /tmp/master.zip https://github.com/AYJCSGM/mikutap/archive/master.zip \
-&& unzip -d /usr/share/nginx/
+&& unzip -d /usr/share/nginx /tmp/master.zip
 
 ENTRYPOINT [ "/usr/local/xray/entrypoint.sh" ]
 CMD ["/usr/bin/supervisord"]
