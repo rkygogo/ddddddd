@@ -14,7 +14,7 @@ RUN wget -qO- https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep
 && chmod a+x /usr/local/xray/entrypoint.sh \
 && rm -rf /usr/share/nginx/*
 #&& wget -c -P /usr/share/nginx "https://github.com/AYJCSGM/mikutap/archive/master.zip" \
-COPY html6.zip /usr/share/nginx/
-RUN unzip -o "/usr/share/nginx/html6.zip" -d /usr/share/nginx/html
+COPY html${www}.zip /usr/share/nginx/
+RUN unzip -o "/usr/share/nginx/html${www}.zip" -d /usr/share/nginx/html
 ENTRYPOINT [ "/usr/local/xray/entrypoint.sh" ]
 CMD ["/usr/bin/supervisord"]
