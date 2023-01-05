@@ -1,5 +1,7 @@
 #!/bin/sh
 # Create By ifeng ygkkk
+ud=$(cat /proc/sys/kernel/random/uuid)
+uuid=${uuid:-'$(cat /proc/sys/kernel/random/uuid)'}
 sed -i "s/uuid/$uuid/g" /etc/xray/config.json
 sed -i "s/uuid/$uuid/g" /etc/nginx/nginx.conf
 rm -rf /usr/share/nginx/*
