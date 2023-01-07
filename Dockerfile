@@ -1,4 +1,4 @@
-FROM nginx:mainline
+FROM nginx:latest
 LABEL ifeng ygkkk
 EXPOSE 80
 USER root
