@@ -1,4 +1,4 @@
-FROM nginx:1.23.3-perl
+FROM nginx:mainline
 LABEL ifeng ygkkk
 EXPOSE 80
 USER root
