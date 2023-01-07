@@ -1,4 +1,4 @@
-FROM nginx:1.15.8-alpine
+FROM nginx:1.23.3-alpine
 LABEL ifeng ygkkk
 EXPOSE 80
 USER root
