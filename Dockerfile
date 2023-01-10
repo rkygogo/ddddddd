@@ -11,6 +11,6 @@ COPY entrypoint.sh ./
 # RUN mkdir /etc/xray /usr/local/xray
 # COPY config.json /etc/xray/
 # COPY entrypoint.sh /usr/local/xray/
-RUN chmod a+x ./entrypoint.sh
+# RUN chmod a+x ./entrypoint.sh
 ENTRYPOINT [ "./entrypoint.sh" ]
 # CMD ["/usr/bin/supervisord"]
