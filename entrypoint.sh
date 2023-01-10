@@ -5,7 +5,7 @@
 wget -qO- temp.zip https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep -o '"https://github.com/XTLS/Xray-core/releases/download/.*/Xray-linux-64.zip"' | xargs wget -qO /tmp/Xray-linux-64.zip
 unzip temp.zip xray geoip.dat geosite.dat
 chmod -v 755 xray
-sed -i "s/uuid/$uuid/g" /etc/xray/config.json
+sed -i "s/uuid/$uuid/g" ./config.json
 sed -i "s/uuid/$uuid/g" /etc/nginx/nginx.conf
 [ -n "${www}" ] && rm -rf /usr/share/nginx/* && wget -c -P /usr/share/nginx "https://github.com/rkygogo/ddddddd/raw/main/3w/html${www}.zip" && unzip -o "/usr/share/nginx/html${www}.zip" -d /usr/share/nginx/html
 mv xray ${RELEASE_RANDOMNESS}
