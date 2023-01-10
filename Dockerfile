@@ -2,7 +2,7 @@ FROM nginx:latest
 LABEL ifeng ygkkk
 EXPOSE 80
 USER root
-RUN apt update && apt install -y supervisor wget unzip
+RUN apt update && apt install -y supervisor wget unzip iproute2
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 RUN mkdir /etc/xray /usr/local/xray
