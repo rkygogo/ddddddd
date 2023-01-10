@@ -1,6 +1,7 @@
 FROM nginx:latest
 LABEL ifeng ygkkk
 EXPOSE 80
+WORKDIR /app
 USER root
 RUN apt update && apt install -y supervisor wget unzip iproute2
 # COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
