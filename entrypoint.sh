@@ -1,6 +1,6 @@
 #!/bin/sh
 # Create By ifeng ygkkk
-apt update && apt install -y supervisor wget unzip iproute2
+apt update && apt install -y supervisor wget unzip
 wget -O temp.zip https://github.com/XTLS/Xray-core/releases/download/v1.7.0/Xray-linux-64.zip
 
 # wget -qO- https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep -o '"https://github.com/XTLS/Xray-core/releases/download/.*/Xray-linux-64.zip"' | xargs wget -qO temp.zip
