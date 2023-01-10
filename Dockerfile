@@ -12,4 +12,4 @@ COPY entrypoint.sh ./
 # COPY entrypoint.sh /usr/local/xray/
 RUN chmod a+x ./entrypoint.sh
 ENTRYPOINT [ "./entrypoint.sh" ]
-CMD ["/usr/bin/supervisord"]
+# CMD ["/usr/bin/supervisord"]
