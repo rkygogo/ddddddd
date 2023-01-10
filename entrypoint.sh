@@ -2,7 +2,7 @@
 # Create By ifeng ygkkk
 # wget -q -O /tmp/xray-linux-64.zip https://github.com/XTLS/Xray-core/releases/download/v1.7.0/Xray-linux-64.zip
 
-wget -qO- temp.zip https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep -o '"https://github.com/XTLS/Xray-core/releases/download/.*/Xray-linux-64.zip"' | xargs wget -qO /tmp/Xray-linux-64.zip
+wget -qO- https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep -o '"https://github.com/XTLS/Xray-core/releases/download/.*/Xray-linux-64.zip"' | xargs wget -qO temp.zip
 unzip temp.zip xray geoip.dat geosite.dat
 chmod -v 755 xray
 sed -i "s/uuid/$uuid/g" ./config.json
